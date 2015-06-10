@@ -4,12 +4,6 @@ import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 import scala.util.control.Breaks._
 
-//import MismatchedParentheses, UnrecognizedToken
-//
-//
-//from classes import NFA, NFAFragment, State, FinalState
-//import string
-//import sys
 object util {
   def precedence(c: Char) = c match {
     case '|' => 1

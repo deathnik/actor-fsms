@@ -11,7 +11,6 @@ object PoSTagger {
   def resolve(s: String): Char = {
     val sp = s.split(" ")
     if(s == null || s =="" || sp==null) return '.'
-   // println(s)
     try {
       val tags = tagger.tag(sp)
       if(!map.contains(tags(0))) '`' else map(tags(0))

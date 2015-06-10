@@ -12,33 +12,6 @@ case class MatchIt(data: List[Char])
 
 case class MatchString(data: String)
 
-//object ActorDState {
-//  def apply(states: util.ArrayList[State]): Props = Props(classOf[ActorDState], states)
-//}
-//
-//class ActorDState(states: util.ArrayList[State]) extends Actor {
-//  val transitions: mutable.HashMap[Char, ActorRef] = new mutable.HashMap[Char, ActorRef]()
-//  val matching: Int = Main.isEndState(states)
-//
-//  override def receive = {
-//    case x: MatchIt => {
-//      x.data match {
-//        case Nil => isFinal
-//        case h :: t =>
-//          if (!(transitions contains h)) {
-//            transitions.put(h, Main.getActorDState(states, h))
-//          }
-//          transitions(h) ! MatchIt(t)
-//      }
-//    }
-//  }
-//
-//  def isFinal: Int ={
-//    println("heyho " + matching)
-//    matching
-//  }
-//
-//}
 object Oracle {
   val system = ActorSystem("Magic")
   val cash = mutable.HashMap[mutable.ListBuffer[State], ActorRef]()
